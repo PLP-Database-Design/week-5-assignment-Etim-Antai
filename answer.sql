@@ -7,7 +7,7 @@ CREATE TABLE patients (
     gender VARCHAR(50) NOT NULL,
     language VARCHAR(255) NOT NULL
 );
--- Question 2.2 : providers' table
+-- Question 2.2 : To create providers' table
 CREATE TABLE providers (
     provider_id INT PRIMARY KEY AUTO_INCREMENT,
     first_name VARCHAR (255) NOT NULL,
