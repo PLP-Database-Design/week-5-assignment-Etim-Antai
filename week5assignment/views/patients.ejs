@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Table</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        th,
+        td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table>
+        <thead>
+            <tr>
+                <th>PATIENT ID</th>
+                <th>FIRST NAME</th>
+                <th>LAST NAME</th>
+                <th>DATE OF BIRTH</th>
+                <th>GENDER</th>
+                <th>LANGUAGE</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% data.forEach(row=> { %>
+                <tr>
+                    <td>
+                        <%= row.patient_id %>
+                    </td>
+                    <td>
+                        <%= row.first_name %>
+                    </td>
+                    <td>
+                        <%= row.last_name %>
+                    </td>
+                    <td>
+                        <%= row.date_of_birth %>
+                    </td>
+                    <td>
+                        <%= row.gender %>
+                    </td>
+                    <td>
+                        <%= row.language %>
+                    </td>
+                </tr>
+                <% }); %>
+        </tbody>
+    </table>
+
+</body>
+
+</html>
